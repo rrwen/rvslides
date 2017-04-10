@@ -1,7 +1,7 @@
 # rvslides
 Richard Wen  
 rrwen.dev@gmail.com  
-* [Template Slides](https://rrwen.github.io/rvslides)
+* [Template Slides](https://rrwen.github.io/rvslides/slides)
 
 Minimalistic template and PDF rendering for [reveal.js](https://github.com/hakimel/reveal.js/) presentations.
 
