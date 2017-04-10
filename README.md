@@ -69,6 +69,7 @@ The JS packages are contained in **js/** with package management based on [bower
 
 ### TO DO
 
+* Implement templating engine
 * Document Github Hosting
 * Unit tests
 
