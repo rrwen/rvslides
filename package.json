@@ -20,7 +20,10 @@
     "rrwen",
     "template",
     "reveal.js",
+	"reveal",
     "slides",
+	"pdf",
+	"minimal",
     "presentation"
   ],
   "author": "Richard Wen",
