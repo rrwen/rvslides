@@ -1,7 +1,7 @@
 {
   "name": "rvslides",
   "version": "0.0.1",
-  "description": "Minimalistic template and PDF rendering for revealjs presentations",
+  "description": "Minimalistic command line tool for templating and PDF rendering of reveal.js presentations.",
   "main": "index.html",
   "bin": {
     "rvslides": "./bin/rvslides.js"
@@ -19,12 +19,19 @@
     "rvslides",
     "rrwen",
     "template",
-    "reveal.js",
+    "js",
 	"reveal",
     "slides",
 	"pdf",
 	"minimal",
-    "presentation"
+    "presentation",
+	"pdf",
+	"minimal",
+	"render",
+	"deck",
+	"phantom",
+	"decktape",
+	"bower"
   ],
   "author": "Richard Wen",
   "license": "MIT",
