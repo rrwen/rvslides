@@ -2,18 +2,20 @@
 
 // (rvslides_modules)
 var execSync = require('child_process').execSync;
-var fs = require('fs');
-var ncp = require('ncp').ncp;
+var fs = require('fs-extra');
 var argv = require('yargs')
-.usage('Usage: $0 <command> [options]')
-.command('create', 'Create a Reveal.js template inside the given folder')
-.example('$0 create -o slides', 'Create Reveal.js presentation inside a folder named slides')
-.command('pdf', 'Render the index.html to pdf/index.pdf')
-.example('$0 pdf', 'Render index.html to pdf/index.pdf')
-.example('$0 pdf path/to/slides.html path/to/slides.pdf', 'Render different Reveal.js html slides to a pdf')
+.usage('Usage: rvslides <command> [options]')
+.command('create', 'Create Reveal.js slides')
+.example('rvslides create', 'Create presentation in current directory')
+.example('rvslides create slides', 'Create presentation in slides folder')
+.command('pdf', 'Render Reveal,js slides to pdf')
+.example('rvslides pdf', 'Render index.html to pdf/index.pdf')
+.example('rvslides pdf slides.html slides.pdf', 'Render chosen files')
 .demandCommand(1)
 .alias('s', 'source')
 .alias('o', 'out')
+.help('h')
+.alias('h', 'help')
 .argv;
 
 // (rvslides_variables)
@@ -21,12 +23,16 @@ var cmd = argv._[0];
 
 // (rvslides_create) Copy slides as template
 if (cmd === 'create') {
-  var slidesOut = argv._[1] || argv.out || 'slides';
-  ncp(__dirname + '/../slides', slidesOut, function (err) {
+  var slidesOut = argv._[1] || argv.out || '';
+  fs.copy(__dirname + '/../slides', slidesOut, function (err) {
    if (err) {
      console.error(err);
    }
-   console.log('Created Reveal.js template at ' + slidesOut);
+   if (slidesOut === '') {
+     console.log('Created Reveal.js template');
+   } else {
+     console.log('Created Reveal.js template at ' + slidesOut);
+   }
   });
 }
 

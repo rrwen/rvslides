@@ -1,13 +1,13 @@
 {
   "name": "rvslides",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimalistic command line tool for templating and PDF rendering of reveal.js presentations.",
   "main": "index.html",
   "bin": {
     "rvslides": "./bin/rvslides.js"
   },
   "scripts": {
-    "js": "node ./scripts/js/bower.js",
+    "bower": "node ./scripts/bower/bower.js",
     "pdf-install": "node ./scripts/pdf/install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,21 +17,23 @@
   },
   "keywords": [
     "rvslides",
+    "rv",
     "rrwen",
     "template",
     "js",
-	"reveal",
+    "reveal",
+    "revealjs",
     "slides",
-	"pdf",
-	"minimal",
+    "pdf",
     "presentation",
-	"pdf",
-	"minimal",
-	"render",
-	"deck",
-	"phantom",
-	"decktape",
-	"bower"
+    "minimal",
+    "render",
+    "deck",
+    "phantom",
+    "phantomjs",
+    "decktape",
+    "deck",
+    "bower"
   ],
   "author": "Richard Wen",
   "license": "MIT",
@@ -41,8 +43,7 @@
   "homepage": "https://github.com/rrwen/rvslides#readme",
   "dependencies": {
     "decktape": "github:astefanutti/decktape",
-    "fs": "0.0.1-security",
-    "ncp": "^2.0.0",
+    "fs-extra": "^2.1.2",
     "os": "^0.1.1",
     "request": "^2.81.0",
     "request-progress": "^3.0.0",

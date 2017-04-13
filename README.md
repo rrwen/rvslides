@@ -7,56 +7,50 @@ Minimalistic command line tool for templating and PDF rendering of [reveal.js](h
 
 ```
 npm install rvslides -g
-rvslides create slides
+rvslides create
 rvslides pdf
 ```
 
-## Setup
+## Install
 
-Ensure that the following are installed:
-
-1. [Node.js](https://nodejs.org)
-2. [git](https://git-scm.com/)
-
-Install via npm:
+1. Ensure [Node.js](https://nodejs.org) is installed
+2. Install via npm:
 
 ```
 npm install rvslides -g
 ```
 
-Install via git:
-
-```
-git clone https://github.com/rrwen/rvslides
-cd rvslides
-npm install -g
-```
+For the latest developer version, see [Developer Install](#developer-install).
 
 ## Usage
 
-Generate a template **index.html**:
+Generate slides **index.html** in the current directory:
 
 ```
-rvslides create slides
+rvslides create
 ```
 
 * Edit the **index.html** file to modify slides
-* Replace the **img/logo.svg** file to change the slides logo
+* Replace the **img/logo.svg** file to change the logo
 
-Render **index.html** as a PDF in **pdf/index.pdf**:
+Render **index.html** slides as a PDF **pdf/index.pdf**:
 
 ```
 rvslides pdf
 ```
 
-## Portable Document File (PDF)
+For usage help, use `rvslides -h`
+
+## Advanced Usage
+
+### Render Portable Document File (PDF)
 
 PDF support is based on [decktape](https://github.com/astefanutti/decktape).
 
 * Generate *pdf/index.pdf* for *index.html* with `rvslides pdf`
 * Generate a PDF with different html slides and output with `rvslides pdf path/to/slides.html path/to/slides.pdf`
 
-## JavaScript (JS) Packages
+## Manage JavaScript (JS) Packages
 
 The JS packages are contained in **js/** with package management based on [bower](https://bower.io/).
 
@@ -69,9 +63,32 @@ The JS packages are contained in **js/** with package management based on [bower
 
 ### TO DO
 
-* Implement templating engine
-* Document Github Hosting
-* Unit tests
+* Incorporate a templating engine
+* Document Github hosting
+* Create unit tests
+
+### Developer Install
+
+1. Ensure [git](https://git-scm.com/) is installed
+2. Install via git:
+
+```
+git clone https://github.com/rrwen/rvslides
+cd rvslides
+npm install -g
+```
+
+### Developer Maintenance
+
+1. Update package and slide dependencies
+2. Check **slides/index.html**
+
+```
+npm update --save
+npm run bower update --save
+```
+
+## Implementation Notes
 
 ### PDF Support Implementation
 
@@ -79,7 +96,7 @@ PDF generation is based on [decktape](https://github.com/astefanutti/decktape), 
 
 ### JS Package Management Implementation
 
-Client-end packages are installed and updated with [bower](https://bower.io/) inside **js**. Bower is installed inside this folder to avoid an unwanted global installation, however it can be installed globally by running `npm install bower -g`. The **bower.json** file is used to specify package dependencies and [node](https://nodejs.org/api/cli.html) is used to run updates with [npm commands](https://slides.npmjs.com/misc/scripts#examples) (inside **package.json**) assigned to `npm run js update`, `npm run js install`, and `npm run js uninstall`. These commands are for updating client-end packages on the developer side.
+Client-end packages are installed and updated with [bower](https://bower.io/) inside **bower_components**. Bower is installed inside this folder to avoid an unwanted global installation, however it can be installed globally by running `npm install bower -g`. The **bower.json** file is used to specify package dependencies and [node](https://nodejs.org/api/cli.html) is used to run updates with [npm commands](https://slides.npmjs.com/misc/scripts#examples) (inside **package.json**) assigned to `npm run bower update`, `npm bower js install`, and `npm run bower uninstall`. These commands are for updating client-end packages on the developer side.
 
 ### CSS Implementation
 
