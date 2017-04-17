@@ -1,7 +1,8 @@
 # rvslides
 Richard Wen  
 rrwen.dev@gmail.com  
-* [Template Slides](https://rrwen.github.io/rvslides/slides)
+* [HTML Slides](https://rrwen.github.io/rvslides/slides)
+* [PDF Slides](https://github.com/rrwen/rvslides/blob/master/slides/pdf/index.pdf)
 
 Minimalistic command line tool for templating and PDF rendering of [reveal.js](https://github.com/hakimel/reveal.js/) presentations.
 
