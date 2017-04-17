@@ -82,10 +82,14 @@ npm install -g
 
 1. Update package and slide dependencies
 2. Check **slides/index.html**
+3. Commit and push changes
 
 ```
 npm update --save
 npm run bower update --save
+npm add .
+npm commit -a -m "Maintenance update"
+npm push
 ```
 
 ## Implementation Notes
