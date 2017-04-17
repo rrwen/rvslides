@@ -52,7 +52,7 @@ if (cmd === 'pdf') {
   var decktape = __dirname + '/../node_modules/decktape/decktape.js';
   var platform = os.platform();
   var pdfSrc = argv._[1] || argv.source || 'index.html';
-  var pdfDest = argv._[2] || argv.out || 'index.html pdf/index.pdf';
+  var pdfDest = argv._[2] || argv.out || 'pdf/index.pdf';
   if (platform === 'win32') {
     execSync('"' + phantomjs + '.exe' + '" "' + decktape + '" ' + pdfSrc + ' ' + pdfDest, {stdio: [0, 1, 2]});
   } else {

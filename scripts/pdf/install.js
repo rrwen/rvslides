@@ -1,5 +1,4 @@
 // Modules
-var download = require('download-git-repo');
 var fs = require('fs-extra');
 var os = require('os');
 var request = require('request');

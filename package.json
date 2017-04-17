@@ -1,6 +1,6 @@
 {
   "name": "rvslides",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Minimalistic command line tool for templating and PDF rendering of reveal.js presentations.",
   "main": "index.html",
   "bin": {
@@ -28,7 +28,6 @@
     "presentation",
     "minimal",
     "render",
-    "deck",
     "phantom",
     "phantomjs",
     "decktape",
@@ -47,7 +46,7 @@
     "os": "^0.1.1",
     "request": "^2.81.0",
     "request-progress": "^3.0.0",
-    "yargs": "^7.0.2"
+    "yargs": "^7.1.0"
   },
   "devDependencies": {
     "bower": "^1.8.0"
