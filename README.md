@@ -12,6 +12,8 @@ rvslides create
 rvslides pdf
 ```
 
+**WARNING:** No longer installs properly due to changes from [decktape](https://github.com/astefanutti/decktape).
+
 ## Install
 
 1. Ensure [Node.js](https://nodejs.org) is installed
